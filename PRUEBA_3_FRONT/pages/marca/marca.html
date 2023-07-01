@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="/js/marca/funciones_marca.js"></script>
+    <title>MARCA</title>
+</head>
+<body onload="listaProducto();">
+    <!-- INICIO NAVBAR -->
+        <nav class="navbar bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/pages/producto/producto.html">PRODUCTO</a>
+                <a class="navbar-brand" href="/pages/proveedor/proveedor.html">PROVEEDOR</a>
+                <a class="navbar-brand" href="/pages/categoria/categoria.html">CATEGORIA</a>
+                <a class="navbar-brand" href="/pages/marca/marca.html">MARCA</a>
+            </div>
+        </nav>
+    <!-- FIN NAVBAR -->
+    <h2>
+        <small class="text">Lista Marca</small><button type="button" class="btn">
+            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <img src="/img/anadir.png">
+            </button>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Agregar marca</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                              <!-- formulario -->
+                            <form>
+                                  <div class="form-group row">
+                                    <label for="nom_marca" class="col-form-label">Nombre marca</label>
+                                    <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="nom_marca" placeholder="Ingrese Nuevo Nombre marca" >
+                                  </div>
+                                  </div>
+                                  
+                                  <div class="form-group row">
+                                    <label for="cod_marca" class="col-form-label">Codigo marca</label>
+                                    <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="cod_marca" placeholder="Ingrese Nuevo Codigo Numerico" >
+                                  </div>
+                                  </div>
+                                  
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button class="btn btn-primary" onclick="agregar();">Agregar!!</button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                    </h2>
+
+    <h3>
+        <small class="text-muted">Lista Marca</small>
+      </h3>
+          <!--tabla -->
+          <table class="table">
+              <thead>
+                  <tr>
+                      <th>ID</th>
+                      <th>Nombre</th>
+                      <th>Codigo</th>
+                  </tr>
+              </thead>
+              <tbody class="data">
+              </tbody>
+          </table>
+</body>
+</html>
